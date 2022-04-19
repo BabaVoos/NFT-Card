@@ -1,0 +1,122 @@
+:root {
+    --primary-soft-blue: #8bacda;
+    --primary-cyan: #00fff7;
+    --main-bg-color: #0d192b;
+    --card-bg-color: #14253d;
+    --line-color: #22344f;
+    --white-color: #ffffff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--primary-soft-blue);
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.container {
+    background-color: var(--card-bg-color);
+    position: absolute;
+    padding: 16px;
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.main {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    padding: 18px 0;
+    display: flex;
+    color: var(--white-color);
+}
+h3:hover {
+    color: var(--primary-cyan)
+}
+p {
+    font-size: 14px;
+}
+.sides {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.left-side {
+    display: flex;
+    gap: 5px;
+    color: var(--primary-cyan);
+}
+.left-side p {
+    font-weight: bold;
+}
+.right-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.right-side img {
+    width: 18px;
+    height: 18px;
+}
+.right-side p {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.avatar {
+    max-width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+}
+
+hr {
+    border-top: 2px solid var(--line-color);
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+}
+
+.footer {
+    display: flex;
+    font-size: 14px;
+    padding-top: 14px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer div {
+    margin-right: 16px;
+}
+.link {
+    color: var(--white-color);
+    cursor: pointer;
+}
+  
+  @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+  }
